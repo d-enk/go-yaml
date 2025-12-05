@@ -14,10 +14,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/goccy/go-yaml"
-	"github.com/goccy/go-yaml/ast"
-	"github.com/goccy/go-yaml/internal/errors"
-	"github.com/goccy/go-yaml/parser"
+	"github.com/d-enk/go-yaml"
+	"github.com/d-enk/go-yaml/ast"
+	"github.com/d-enk/go-yaml/internal/errors"
+	"github.com/d-enk/go-yaml/parser"
 )
 
 type Child struct {
@@ -2024,7 +2024,6 @@ x-some-extra-thing: b_value
 			t.Fatal("expected error")
 		}
 	})
-
 }
 
 func TestDecoder_AllowDuplicateMapKey(t *testing.T) {
@@ -3434,7 +3433,6 @@ func TestNodeUnmarshalerContext(t *testing.T) {
 			}
 		})
 	}
-
 }
 
 type testNodeUnmarshaler struct {
@@ -3520,7 +3518,6 @@ func TestNodeUnmarshaler(t *testing.T) {
 			}
 		})
 	}
-
 }
 
 func TestMapKeyCustomUnmarshaler(t *testing.T) {
@@ -3617,7 +3614,6 @@ baz: *seq
 	); err != nil {
 		t.Fatal(err)
 	}
-
 }
 
 func TestIssue650(t *testing.T) {

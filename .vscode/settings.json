@@ -1,0 +1,14 @@
+{
+  "workbench.colorCustomizations": {
+    "commandCenter.border": "#15202b99",
+    "editor.foldBackground": "#ff000000",
+    "editor.lineHighlightBackground": "#1073cf2d",
+    "editor.lineHighlightBorder": "#9fced11f",
+    "sash.hoverBorder": "#86f5d7",
+    "titleBar.activeBackground": "#57f1c7",
+    "titleBar.activeForeground": "#15202b",
+    "titleBar.inactiveBackground": "#57f1c799",
+    "titleBar.inactiveForeground": "#15202b99"
+  },
+  "peacock.color": "#57f1c7"
+}

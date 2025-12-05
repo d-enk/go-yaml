@@ -5,8 +5,8 @@ import (
 	"math"
 	"strings"
 
-	"github.com/goccy/go-yaml/ast"
-	"github.com/goccy/go-yaml/token"
+	"github.com/d-enk/go-yaml/ast"
+	"github.com/d-enk/go-yaml/token"
 )
 
 // Property additional property set for each the token

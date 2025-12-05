@@ -14,13 +14,15 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/goccy/go-yaml"
-	"github.com/goccy/go-yaml/ast"
-	"github.com/goccy/go-yaml/parser"
+	"github.com/d-enk/go-yaml"
+	"github.com/d-enk/go-yaml/ast"
+	"github.com/d-enk/go-yaml/parser"
 )
 
-var zero = 0
-var emptyStr = ""
+var (
+	zero     = 0
+	emptyStr = ""
+)
 
 type TestTextMarshaler string
 
@@ -1757,6 +1759,7 @@ func (t *tMarshal) MarshalYAML() ([]byte, error) {
 	}
 	return buf.Bytes(), nil
 }
+
 func Test_Marshaler(t *testing.T) {
 	const expected = `- hello-world
 `
@@ -1811,10 +1814,12 @@ type FastMarshaler struct {
 	A string
 	B int
 }
-type TextMarshaler int64
-type TextMarshalerContainer struct {
-	Field TextMarshaler `yaml:"field"`
-}
+type (
+	TextMarshaler          int64
+	TextMarshalerContainer struct {
+		Field TextMarshaler `yaml:"field"`
+	}
+)
 
 func (v SlowMarshaler) MarshalYAML() ([]byte, error) {
 	var buf bytes.Buffer
